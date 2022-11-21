@@ -7,7 +7,7 @@ const Products = () => {
 
   return (
     <section>
-      {products.map(product => <Product {...products[0]} />)}
+      {products.map(product => <Product {...products[product.id - "1"]} />)}
     </section>
     /* <section>
        <Product
