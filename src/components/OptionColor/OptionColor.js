@@ -1,8 +1,5 @@
-/*import styles from './OptionColor.module.scss';
-import clsx from "clsx";
-import PropTypes from "prop-types";
-import Button from '../Button/Button';
-
+import styles from './OptionColor.module.scss';
+import clsx from 'clsx';
 
 const OptionColor = props => {
 
@@ -17,16 +14,16 @@ const OptionColor = props => {
         {props.colors.map((color) => {
           return (
             <li key={color}>
-              <Button className={clsx(prepareColorClassName(color), color === props.currentColor && styles.active)} onClick={(e) => {
+              <button className={clsx(prepareColorClassName(color), color === props.currentColor && styles.active)} onClick={(e) => {
                 e.preventDefault();
-                setCurrentColor(color);
-              }} />
+                props.setCurrentColor(color);
+              }}></button>
             </li>
           );
         })}
       </ul>
     </div>
-  );
+  )
 };
 
-export default OptionColor;*/
+export default OptionColor;
